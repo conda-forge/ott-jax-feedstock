@@ -1,5 +1,5 @@
 {% set name = "ott-jax" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ott-jax-{{ version }}.tar.gz
-  sha256: adcd3c59ac9223a962b7a9244c4f53cc9857bf2461530583edb1ea8a1fc37ea3
+  sha256: 9bb555dccffa9b58e157a649808096e6dc2c46c2bfe6d12ec758d6114bf8af87
 
 build:
   number: 0
@@ -32,11 +32,12 @@ requirements:
     - typing-extensions
 
 test:
-  # `pip check` is disabled because the release
-  # contained some test/unused requirements;
-  # reintroduce once new release is made
   imports:
     - ott
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/ott-jax/ott
