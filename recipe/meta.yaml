@@ -1,5 +1,5 @@
 {% set name = "ott-jax" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ott-jax-{{ version }}.tar.gz
-  sha256: 9bb555dccffa9b58e157a649808096e6dc2c46c2bfe6d12ec758d6114bf8af87
+  sha256: 949fd59a68750581425887f840565f014f31bd846494a8207ec2d836f60f19ed
 
 build:
   number: 0
@@ -16,20 +16,19 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
+    - python >=3.8
     - jax >=0.1.67
     - jaxlib >=0.1.47
+    - jaxopt >=0.5.5
     - numpy >=1.18.4,!=1.23.0
     - matplotlib-base >=3.0.0
     - flax >=0.5.2
     - optax >=0.1.1
     - scipy >=1.7.0
-    - importlib-metadata >=1.0
-    - typing-extensions
 
 test:
   imports:
