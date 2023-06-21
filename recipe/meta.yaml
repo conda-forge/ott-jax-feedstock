@@ -1,5 +1,5 @@
 {% set name = "ott-jax" %}
-{% set version = "0.4.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ott-jax-{{ version }}.tar.gz
-  sha256: 949fd59a68750581425887f840565f014f31bd846494a8207ec2d836f60f19ed
+  sha256: 00381149f2414ed0f4a73a3e1613922a772b5ada550b16706dd117f8c903bba6
 
 build:
   number: 0
@@ -25,10 +25,9 @@ requirements:
     - jaxlib >=0.1.47
     - jaxopt >=0.5.5
     - numpy >=1.18.4,!=1.23.0
-    - matplotlib-base >=3.0.0
     - flax >=0.5.2
     - optax >=0.1.1
-    - scipy >=1.7.0
+    - lineax >=0.0.1  # [py>3.8]
 
 test:
   imports:
@@ -42,7 +41,7 @@ about:
   home: https://github.com/ott-jax/ott
   license: Apache-2.0
   license_file: LICENSE
-  summary: Optimal Transport Tools in Jax.
+  summary: Optimal Transport Tools in JAX
   description: |
     A JAX powered library to compute optimal transport at scale and on accelerators.
   doc_url: https://ott-jax.readthedocs.io
