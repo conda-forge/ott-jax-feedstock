@@ -27,7 +27,7 @@ requirements:
     - numpy >=1.18.4,!=1.23.0
     - flax >=0.5.2
     - optax >=0.1.1
-    - lineax >=0.0.1  # [py>3.8]
+    - lineax >=0.0.1  # [py > 3.8]
 
 test:
   imports:
