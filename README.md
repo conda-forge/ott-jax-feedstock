@@ -1,13 +1,13 @@
-About ott-jax
-=============
+About ott-jax-feedstock
+=======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ott-jax-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ott-jax/ott
 
 Package license: Apache-2.0
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/ott-jax-feedstock/blob/main/LICENSE.txt)
-
-Summary: Optimal Transport Tools in Jax.
+Summary: Optimal Transport Tools in JAX
 
 Development: https://github.com/ott-jax/ott
 
