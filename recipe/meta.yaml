@@ -1,5 +1,5 @@
 {% set name = "ott-jax" %}
-{% set version = "0.4.2" %}
+{% set version = "0.4.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ott-jax-{{ version }}.tar.gz
-  sha256: 071fdd5fca23558bbb0c71f7251de5549ea40cca25c108262c01e6f3de0ba5b9
+  sha256: e2f37d8e8eb541c6198324d7c7b13bdb4c7f9b542ec595e2f785e1b0047319a4
 
 build:
   number: 0
@@ -23,15 +23,13 @@ requirements:
     - python >=3.8
     - jax >=0.1.67
     - jaxlib >=0.1.47
-    - jaxopt >=0.5.5
-    - numpy >=1.18.4,!=1.23.0
-    - flax >=0.5.2
-    - optax >=0.1.1
+    - jaxopt >=0.8
+    - numpy >=1.18.4
 
 test:
   imports:
     - ott
-  # enable on `lineax` is available
+  # enable once `lineax` is on conda-forge
   # commands:
   #   - pip check
   # requires:
