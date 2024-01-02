@@ -1,5 +1,5 @@
 {% set name = "ott-jax" %}
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ott-jax-{{ version }}.tar.gz
-  sha256: e2f37d8e8eb541c6198324d7c7b13bdb4c7f9b542ec595e2f785e1b0047319a4
+  sha256: 20da1e501cfb94e0bf87a7695e1a90ccd38fd16e7d508df097286e6e2d77a261
 
 build:
   number: 0
