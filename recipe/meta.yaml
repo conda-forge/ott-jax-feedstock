@@ -1,12 +1,13 @@
 {% set name = "ott-jax" %}
 {% set version = "0.5.0" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 0aaea41675d4c62106e66a2b241ab8a71ff6977efe1539bb865e537ff0765e52
 
 build:
@@ -16,11 +17,12 @@ build:
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - jax >=0.4.0
     - jaxopt >=0.8
     - lineax >=0.0.7
@@ -29,6 +31,8 @@ requirements:
     - typing_extensions
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ott
 
